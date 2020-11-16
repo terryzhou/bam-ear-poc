@@ -1,0 +1,1 @@
+Weblogic Cluster Singleton example.
