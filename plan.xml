@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<deployment-plan xmlns="http://xmlns.oracle.com/weblogic/deployment-plan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/deployment-plan http://xmlns.oracle.com/weblogic/deployment-plan/1.0/deployment-plan.xsd" global-variables="false">
+  <application-name>bampoc-ear-sample-1.0.0-SNAPSHOT.ear</application-name>
+
+  <module-override>
+    <module-name>bampoc-ear-sample-1.0.0-SNAPSHOT.ear</module-name>
+    <module-type>ear</module-type>
+    <module-descriptor external="false">
+      <root-element>weblogic-application</root-element>
+      <uri>META-INF/weblogic-application.xml</uri>
+      <variable-assignment>
+        <name>bam-singleton</name>
+        <xpath>/weblogic-application/singleton-service</xpath>
+        <operation>remove</operation>
+      </variable-assignment>    
+    </module-descriptor>
+  </module-override>  
+</deployment-plan>
